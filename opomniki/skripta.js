@@ -11,6 +11,20 @@ window.addEventListener('load', function() {
 		document.querySelector(".pokrivalo").style.visibility="hidden";
 	}
 	
+	//dodaj opomnik
+	var dodajOpomnik = function(){
+		var naziv_opomnika = document.querySelector("#naziv_opomnika").value;
+		var cas_opomnika = document.querySelector("cas_opomnika").valure;
+		document.querySelector("#naziv_opomnika").value = "";
+		document.querySelector("#cas_opomnika").value = "";
+		document.querySelector("#opomnik").innerHTML += " \
+		<div class='opomnik_rob_senca'> \
+			<div class ='naziv_opomnika'> "+naziv_opomnika +"</div>\
+			div class='cas_opomnika'>"opomnik cez <span>" + cas_opomnika +</span> sekund  </div> \
+		</div>";
+		
+	}
+	document.querySelector("#dodajGumb")addEventListener('click', dodajOpomnik);
 	
 	document.querySelector("#prijavniGumb")
 	.addEventListener('click', izvediPrijavo);
